@@ -26,13 +26,15 @@
             <div class="myContainer">
                 <nav>
                     <img src="../developer/assets/imgs/logo.png" class="logo">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <ion-icon name="close-sharp" class="icon" onclick="closemenu()"></ion-icon>
                     </ul>
+                    <ion-icon name="menu-sharp" class="icon" onclick="openmenu()"></ion-icon>
                 </nav>
                 <div class="header-text">
                     <p>Programmer</p>
@@ -80,6 +82,94 @@
                 </div>
             </div>
         </div>
+        <div id="service">
+            <div class="myContainer">
+                <h1 class="mySubtitle">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <ion-icon class="icon" name="code-slash-sharp"></ion-icon>
+                        <h2>Web Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque neque in est egestas eleifend.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <ion-icon class="icon" name="apps-sharp"></ion-icon>
+                        <h2>App Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque neque in est egestas eleifend.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <ion-icon class="icon" name="crop-sharp"></ion-icon>
+                        <h2>UI/UX Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque neque in est egestas eleifend.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <div class="myContainer">
+                <div class="mySubtitle">My Work</div>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="assets/imgs/pexels-ingo-joseph-35969.jpg"></img>
+                        <div class="layer">
+                            <h3>City Map Apps</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque neque in est egestas eleifend.</p>
+                            <a href="#"><ion-icon name="link-sharp"></ion-icon></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="assets/imgs/pexels-mohi-syed-50614.jpg"></img>
+                        <div class="layer">
+                            <h3>Music App</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque neque in est egestas eleifend.</p>
+                            <a href="#"><ion-icon name="link-sharp"></ion-icon></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="assets/imgs/pexels-torsten-dettlaff-54284.jpg"></img>
+                        <div class="layer">
+                            <h3>Payment App</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque neque in est egestas eleifend.</p>
+                            <a href="#"><ion-icon name="link-sharp"></ion-icon></a>
+                        </div>
+                    </div>                    
+                </div>
+                <a href="#" class="myBtn">See more</a>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="myContainer">
+                <div class="myRow">
+                    <div class="contact-left">
+                        <h1 class="mySubtitle">Contact Me</h1>
+                        <p><ion-icon name="send-sharp" class="icon"></ion-icon> contact@gmail.com</p>
+                        <p><ion-icon name="call-sharp" class="icon"></ion-icon> 98870977</p>
+                        <div class="social-icons">
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        </div>
+                        <a href="assets/imgs/CV.pdf" download class="myBtn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="myBtn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2023 nickramen. All rights reserved.</p>
+            </div>
+        </div>
 
         
         <!-- Optional JavaScript -->
@@ -90,6 +180,9 @@
 
         <!-- My JavaScript -->
         <script src="assets/js/main.js"></script>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     </body>
 </html>
