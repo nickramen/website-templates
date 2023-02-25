@@ -157,12 +157,13 @@
                         <a href="assets/imgs/CV.pdf" download class="myBtn btn2">Download CV</a>
                     </div>
                     <div class="contact-right">
-                        <form>
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="email" name="Email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
                             <button type="submit" class="myBtn btn2">Submit</button>
                         </form>
+                        <span id="msg"></span>
                     </div>
                 </div>
             </div>
@@ -183,6 +184,25 @@
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxZA7X1RH2efjbVYNjmbBEqMqou51G0KeWUhN6KpU4OLYbLg44QoLSikykChSaC8f0M/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML = "Message sent successfully"
+                        setTimeout(function(){
+                            msg.innerHTML = ""
+                        }, 5000)
+                        form.reset();
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
 
     </body>
 </html>
